@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Professional Portfolio of a Tech Professional showcasing projects, skills, and experience.">
+    <meta name="keywords" content="Portfolio,Software engineering, .Net Framework Developer, C++,C#, Resume ">
+    <meta name="author" content="Ahmed Jehad">
+    <title>Ahmed Jehad</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">A<span class="accent">J</span></a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="menu-toggle">☰</div>
+        </div>
+    </nav>
+
+
+    <!-- Home/Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h1 class="hero-title fade-in">Hi, I'm <span class="gradient-text">Ahmed Jehad</span> </h1>
+            <p class="hero-subtitle fade-in-delay"> Software Engineer | Driven Desktop Applications Developer | .NET
+                Framework Developer | Passionate C++ Enthusiast
+            </p>
+            <div class="cta-group fade-in-delay-2">
+                <a href="#projects" class="btn btn-primary">View Work</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span>Scroll</span>
+            <div class="arrow">↓</div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p style="font-size: 1.1rem; line-height: 1.8;">Passionate about <strong>technology</strong> and
+                        <span style="color: var(--accent-color);">software engineering</span>.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8;">I love exploring <strong>new tech stacks</strong>
+                        and creating <em>innovative projects</em> that push the limits of modern development.</p>
+                </div>
+                <div class="about-image">
+                    <div class="img-glow"></div>
+                    <div class="img-frame">
+                        <img src="img/AhmedJehad.png" alt="Profile Picture">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <!-- Filter Bar -->
+            <div class="filter-container fade-in-delay">
+                <div class="filter-group">
+                    <span class="filter-label">Language:</span>
+                    <div class="filter-options" id="lang-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="cpp">C++</button>
+                        <button class="filter-btn" data-filter="csharp">C#</button>
+                    </div>
+                </div>
+                <div class="filter-group">
+                    <span class="filter-label">Type:</span>
+                    <div class="filter-options" id="type-filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="dotnet-framework">.NET Framework</button>
+                        <button class="filter-btn" data-filter="console">Console</button>
+                        <button class="filter-btn" data-filter="library">Library</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project: soon -->
+                <article class="project-card" data-lang="all" data-type="all">
+                    <div class="project-image">
+                        <img src="img/Coming_Soon_Project.png" alt="Coming Soon">
+                    </div>
+                    <div class="project-content">
+                        <h3>Soon</h3>
+                        <p>More exciting projects are on the way!</p>
+                        <div class="tech-tags">
+                            <span>Soon</span>
+                        </div>
+                        <!-- No button for soon -->
+                    </div>
+                </article>
+
+                <!-- Project: Sparkle -->
+                <article class="project-card" data-lang="csharp" data-type="dotnet-framework">
+                    <div class="project-image">
+                        <img src="img/Cover_Sparklepng.png" alt="Sparkle Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sparkle</h3>
+                        <p>🚗🧼 Sparkle - is a modern C# Windows Forms application designed to manage Clients, users,
+                            and cleaning orders for both cars and carpets, all stored and handled efficiently using text
+                            files (.txt).</p>
+                        <div class="tech-tags">
+                            <span>C#</span>
+                            <span>.NET Framework</span>
+                            <span>WinForms</span>
+                            <span>Guna2 UI</span>
+                        </div>
+                        <button class="btn-sm btn-view" data-project="sparkle">View Details</button>
+                        <!-- Github Link added as data for modal or directly in button later -->
+                    </div>
+                </article>
+
+                <!-- Project: Mind Grid -->
+                <article class="project-card" data-lang="csharp" data-type="dotnet-framework">
+                    <div class="project-image">
+                        <img src="img/Cover_Mind_Grid.png" alt="Mind Grid Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Mind Grid</h3>
+                        <p>🎮 MindGrid is a modern and visually captivating take on the classic (Tic Tac Toe) game.
+                            Built with C# and Windows Forms, it blends smooth gameplay, vibrant design, and a fun
+                            competitive spirit.</p>
+                        <div class="tech-tags">
+                            <span>C#</span>
+                            <span>.NET Framework</span>
+                            <span>WinForms</span>
+                            <span>Guna2 UI</span>
+                        </div>
+                        <button class="btn-sm btn-view" data-project="mindgrid">View Details</button>
+                    </div>
+                </article>
+
+                <!-- Project: Momentum -->
+                <article class="project-card" data-lang="csharp" data-type="dotnet-framework">
+                    <div class="project-image">
+                        <img src="img/Presentation_TO-DO_List.png" alt="Momentum Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Momentum</h3>
+                        <p>✅ Momentum: A simple and efficient to-do list app to add tasks, mark them as complete, delete
+                            items, and save your list to a file — all in a clean, user-friendly interface!</p>
+                        <div class="tech-tags">
+                            <span>C#</span>
+                            <span>.NET Framework</span>
+                            <span>WinForms</span>
+                        </div>
+                        <button class="btn-sm btn-view" data-project="momentum">View Details</button>
+                    </div>
+                </article>
+
+                <!-- Project: Pizzlicious -->
+                <article class="project-card" data-lang="csharp" data-type="dotnet-framework">
+                    <div class="project-image">
+                        <img src="img/WelcomePage.png" alt="Pizzlicious Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Pizzlicious</h3>
+                        <p>🍕 PizzLicious — A C# desktop app for ordering pizza based on preferences. Calculates price
+                            and saves orders to text files.</p>
+                        <div class="tech-tags">
+                            <span>C#</span>
+                            <span>.NET Framework</span>
+                            <span>WinForms</span>
+                        </div>
+                        <button class="btn-sm btn-view" data-project="pizzlicious">View Details</button>
+                    </div>
+                </article>
+
+                <!-- Project: BankPro -->
+                <article class="project-card" data-lang="cpp" data-type="console">
+                    <div class="project-image">
+                        <img src="img/Cover_BankPro.png" alt="BankPro Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>BankPro</h3>
+                        <p>🏦 A simple banking system built in C++. It allows adding, updating, deleting, and searching
+                            for client records using file I/O for data storage.</p>
+                        <div class="tech-tags">
+                            <span>C++</span>
+                            <span>OOP</span>
+                            <span>Console</span>
+                            <span>File I/O</span>
+                        </div>
+                        <button class="btn-sm btn-view" data-project="bankpro">View Details</button>
+                    </div>
+                </article>
+
+                <!-- Project: SmartMarket -->
+                <article class="project-card" data-lang="cpp" data-type="console">
+                    <div class="project-image">
+                        <img src="img/Cover_SmartMarket.png" alt="SmartMarket Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>SmartMarket</h3>
+                        <p>🛒 SuperMark is a basic console-based supermarket system. Users view products/place orders;
+                            managers manage inventory. Good for file I/O practice.</p>
+                        <div class="tech-tags">
+                            <span>C++</span>
+                            <span>OOP</span>
+                            <span>Console</span>
+                            <span>File I/O</span>
+                        </div>
+                        <button class="btn-sm btn-view" data-project="smartmarket">View Details</button>
+                    </div>
+                </article>
+
+                <!-- Project: MiniCalculator -->
+                <article class="project-card" data-lang="cpp" data-type="console">
+                    <div class="project-image">
+                        <img src="img/Cover_MiniCalculator.png" alt="MiniCalculator Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>MiniCalculator</h3>
+                        <p>➕ Comprehensive console-based calculator offering 30+ mathematical operations with beautiful
+                            formatting and intuitive menus.</p>
+                        <div class="tech-tags">
+                            <span>C++</span>
+                            <span>POP</span>
+                            <span>Console</span>
+                            <span>Math</span>
+                        </div>
+                        <button class="btn-sm btn-view" data-project="minicalculator">View Details</button>
+                    </div>
+                </article>
+
+                <!-- Project: DateToolkit -->
+                <article class="project-card" data-lang="cpp" data-type="library console">
+                    <div class="project-image">
+                        <img src="img/Library_Cover_Date.png" alt="DateToolkit Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>DateToolkit</h3>
+                        <p>📅 LibDate: Comprehensive C++ library for manipulating dates (add, subtract, compare,
+                            holidays) without external dependencies.</p>
+                        <div class="tech-tags">
+                            <span>C++</span>
+                            <span>Library</span>
+                            <span>POP</span>
+                            <span>Console</span>
+                        </div>
+                        <button class="btn-sm btn-view" data-project="datetoolkit">View Details</button>
+                    </div>
+                </article>
+
+                <!-- Project: StringUtils -->
+                <article class="project-card" data-lang="cpp" data-type="library console">
+                    <div class="project-image">
+                        <img src="img/Cover_Library_String.png" alt="StringUtils Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>StringUtils</h3>
+                        <p>🔧 clsString: Lightweight C++ library for string manipulation (trim, convert, count, replace)
+                            in an object-oriented style.</p>
+                        <div class="tech-tags">
+                            <span>C++</span>
+                            <span>Library</span>
+                            <span>POP</span>
+                            <span>String</span>
+                        </div>
+                        <button class="btn-sm btn-view" data-project="stringutils">View Details</button>
+                    </div>
+                </article>
+
+                <!-- Project: InputValidator -->
+                <article class="project-card" data-lang="cpp" data-type="library console">
+                    <div class="project-image">
+                        <img src="img/Cover_Library_Input_Validator.png" alt="InputValidator Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>InputValidator</h3>
+                        <p>📚 Input Validator: Simple C++ library to safely read and validate user input. Prevents input
+                            errors in console apps.</p>
+                        <div class="tech-tags">
+                            <span>C++</span>
+                            <span>Library</span>
+                            <span>POP</span>
+                            <span>Validation</span>
+                        </div>
+                        <button class="btn-sm btn-view" data-project="inputvalidator">View Details</button>
+                    </div>
+                </article>
+
+
+
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" required placeholder=" " class="form-input">
+                        <label for="name" class="form-label">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" required placeholder=" " class="form-input">
+                        <label for="email" class="form-label">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" required placeholder=" " class="form-input" rows="5"></textarea>
+                        <label for="message" class="form-label">Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Tech Professional. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/7mee3d" aria-label="GitHub" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/ahmed-jehad/" aria-label="LinkedIn" target="_blank">LinkedIn</a>
+                <a href="https://www.youtube.com/@AhmedJehhad" aria-label="YouTube" target="_blank">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
